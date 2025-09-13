@@ -1,68 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;400;500;600;700;800;900;&family=Work Sans:wght@100;200;300;400;400;500;600;700;800;900;1,500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-spin-slow: spin-slow 10s linear infinite;
+    --animate-fade-in-up: fade-in-up 0.5s ease-out backwards;
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px)
+        }
+
+        50% {
+            transform: translateY(-20px)
+        }
+
+        100% {
+            transform: translateY(0px)
+        }
+    }
+
+
+    @keyframes spin-slow {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+
+
+    }
+
+    @keyframes fade-in-up {
+        from: {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to: {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --raw-font-family-Oswald: 'Oswald', ui-sans-serif, system-ui;
+    --raw-font-family-Poppins: "Poppins", ui-sans-serif, system-ui;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    /* REPLACED HSL VALUES FOR ROOT */
+    --raw-color-background: hsl(0 0% 100%);
+    --raw-color-foreground: hsl(222.2 84% 4.9%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --raw-color-card: hsl(0 0% 100%);
+    --raw-color-card-foreground: hsl(222.2 84% 4.9%);
+
+    --raw-color-popover: hsl(0 0% 100%);
+    --raw-color-popover-foreground: hsl(222.2 84% 4.9%);
+
+    --raw-color-primary: hsl(291.4285714285714 73.48066298342542% 35.490196078431374%);
+    --raw-color-primary-foreground: hsl(272.3076923076923 100% 92.3529411764706%);
+
+    --raw-color-secondary: hsl(240 10.638297872340381% 90.7843137254902%);
+    --raw-color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+
+    --raw-color-muted: hsl(240 10.638297872340381% 90.7843137254902%);
+    --raw-color-muted-foreground: hsl(215.4 16.3% 46.9%);
+
+    --raw-color-accent: hsl(240 10.638297872340381% 90.7843137254902%);
+    --raw-color-accent-foreground: hsl(222.2 47.4% 11.2%);
+
+    --raw-color-destructive: hsl(291.5853658536585 85.41666666666666% 62.35294117647059%);
+    --raw-color-destructive-foreground: hsl(272.3076923076923 100% 92.3529411764706%);
+
+    --raw-color-border: hsl(214.3 31.8% 91.4%);
+    --raw-color-input: hsl(214.3 31.8% 91.4%);
+    --raw-color-ring: hsl(291.4285714285714 73.48066298342542% 35.490196078431374%);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.dark {
+    /* REPLACED HSL VALUES FOR DARK */
+    --raw-color-background: hsl(222.2 84% 4.9%);
+    --raw-color-foreground: hsl(210 40% 98%);
+
+    --raw-color-card: hsl(222.2 84% 4.9%);
+    --raw-color-card-foreground: hsl(210 40% 98%);
+
+    --raw-color-popover: hsl(222.2 84% 4.9%);
+    --raw-color-popover-foreground: hsl(210 40% 98%);
+
+    --raw-color-primary: hsl(291.4285714285714 73.48066298342542% 35.490196078431374%);
+    --raw-color-primary-foreground: hsl(222.2 47.4% 11.2%);
+
+    --raw-color-secondary: hsl(217.2 32.6% 17.5%);
+    --raw-color-secondary-foreground: hsl(210 40% 98%);
+
+    --raw-color-muted: hsl(217.2 32.6% 17.5%);
+    --raw-color-muted-foreground: hsl(215 24% 89%);
+
+    --raw-color-accent: hsl(217.2 32.6% 17.5%);
+    --raw-color-accent-foreground: hsl(210 40% 98%);
+
+    --raw-color-destructive: hsl(291.5853658536585 85.41666666666666% 62.35294117647059%);
+    --raw-color-destructive-foreground: hsl(210 40% 98%);
+
+    --raw-color-border: hsl(217.2 32.6% 17.5%);
+    --raw-color-input: hsl(217.2 32.6% 17.5%);
+    --raw-color-ring: hsl(0 100% 89.21568627450979%);
 }
-a:hover {
-  color: #535bf2;
+
+
+@theme inline {
+    --font-family-Oswald: var(--raw-font-family-Oswald);
+    --font-family-Poppins: var(--raw-font-family-Poppins);
+
+    --color-background: var(--raw-color-background);
+    --color-foreground: var(--raw-color-foreground);
+
+    --color-card: var(--raw-color-card);
+    --color-card-foreground: var(--raw-color-card-foreground);
+
+    --color-popover: var(--raw-color-popover);
+    --color-popover-foreground: var(--raw-color-popover-foreground);
+
+    --color-primary: var(--raw-color-primary);
+    --color-primary-foreground: var(--raw-color-primary-foreground);
+
+    --color-secondary: var(--raw-color-secondary);
+    --color-secondary-foreground: var(--raw-color-secondary-foreground);
+
+    --color-muted: var(--raw-color-muted);
+    --color-muted-foreground: var(--raw-color-muted-foreground);
+
+    --color-accent: var(--raw-color-accent);
+    --color-accent-foreground: var(--raw-color-accent-foreground);
+
+    --color-destructive: var(--raw-color-destructive);
+    --color-destructive-foreground: var(--raw-color-destructive-foreground);
+
+    --color-border: var(--raw-color-border);
+    --color-input: var(--raw-color-input);
+    --color-ring: var(--raw-color-ring);
+
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    @apply bg-background text-primary font-family-Oswald
+}
+nav{
+    @apply font-family-Poppins
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.h1 {
+    @apply text-5xl font-bold
 }
