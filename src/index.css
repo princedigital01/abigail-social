@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;400;500;600;700;800;900;&family=Work Sans:wght@100;200;300;400;400;500;600;700;800;900;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import "tailwindcss";
 
@@ -52,7 +52,7 @@
 
 
 :root {
-    --raw-font-family-Oswald: 'Oswald', ui-sans-serif, system-ui;
+    --raw-font-family-WorkSans: 'Work Sans', ui-sans-serif, system-ui;
     --raw-font-family-Poppins: "Poppins", ui-sans-serif, system-ui;
 
     /* REPLACED HSL VALUES FOR ROOT */
@@ -68,13 +68,13 @@
     --raw-color-primary: hsl(291.4285714285714 73.48066298342542% 35.490196078431374%);
     --raw-color-primary-foreground: hsl(272.3076923076923 100% 92.3529411764706%);
 
-    --raw-color-secondary: hsl(240 10.638297872340381% 90.7843137254902%);
+    --raw-color-secondary: hsl(0, 0%, 40%);
     --raw-color-secondary-foreground: hsl(222.2 47.4% 11.2%);
 
     --raw-color-muted: hsl(240 10.638297872340381% 90.7843137254902%);
     --raw-color-muted-foreground: hsl(215.4 16.3% 46.9%);
 
-    --raw-color-accent: hsl(240 10.638297872340381% 90.7843137254902%);
+    --raw-color-accent: hsl(240, 13%, 92%);
     --raw-color-accent-foreground: hsl(222.2 47.4% 11.2%);
 
     --raw-color-destructive: hsl(291.5853658536585 85.41666666666666% 62.35294117647059%);
@@ -118,7 +118,7 @@
 
 
 @theme inline {
-    --font-family-Oswald: var(--raw-font-family-Oswald);
+    --font-family-WorkSans: var(--raw-font-family-WorkSans);
     --font-family-Poppins: var(--raw-font-family-Poppins);
 
     --color-background: var(--raw-color-background);
@@ -152,12 +152,15 @@
 }
 
 body {
-    @apply bg-background text-primary font-family-Oswald
-}
-nav{
-    @apply font-family-Poppins
+    @apply bg-background text-primary font-family-WorkSans p-0 m-0
 }
 
 .h1 {
-    @apply text-5xl font-bold
+    @apply  font-bold text-3xl 
+}
+.h2 {
+    @apply  font-semibold text-2xl 
+}
+.h3 {
+    @apply  font-semibold text-xl 
 }
