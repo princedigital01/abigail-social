@@ -3,7 +3,12 @@ import Icon from "@/assets/icon.svg"
 import RightArrow from "@/assets/svgs/arrow-right.svg"
 import Profile from "@/assets/images/profile-sm.png"
 import Profile2 from "@/assets/images/profile2.png"
-import { Palette, Users, BookOpen, Target } from "lucide-react";
+import { Palette, Users, BookOpen, Target } from "lucide-react"
+
+import EbsPortfolio from "@/assets/images/EbsPortfolio.png";
+import BossaPortfolio from "@/assets/images/BossaPortfolio.png";
+import AfrimentPortfolio from "@/assets/images/AfrimentPortfolio.png";
+import PersonalPortfolio from "@/assets/images/PersonalPortfolio.png";
 
 const Images = { Logo, Profile, Profile2 }
 const Svg = { Icon, RightArrow }
@@ -27,6 +32,42 @@ const values = {
         },
 
     ],
+
+
+
+    experiences: [
+        {
+            id: 1,
+            title: "Community Manager-Bossa",
+            subtitle: " Optimized LinkedIn profile, boosted search visibility up to +130%",
+            description: "",
+            image: BossaPortfolio,
+        },
+        {
+            id: 2,
+            title: "Social Media Manager-Afriment",
+            subtitle: "Designed a branded Instagram feed mockup demonstrating how I would grow awareness, increase followers",
+            description: "",
+            image: AfrimentPortfolio,
+        },
+        {
+            id: 3,
+            title: "Personal brand visibility",
+            subtitle:
+                "Optimized my own linkedin profile with strategic keywords, consistently appearing within my target niche.",
+            description: "",
+            image: PersonalPortfolio,
+        },
+        {
+            id: 4,
+            title: "Marketing Intern – Edo Broadcasting Service",
+            subtitle:
+                "Wrote advertising copy for campaigns. Assisted in marketing research and strategy.",
+            description: "",
+            image: EbsPortfolio,
+        },
+    ],
+
 
     WorkProcess: [
         {
