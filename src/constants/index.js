@@ -1,17 +1,24 @@
 import Logo from '@/assets/Logo.png'
 import Icon from "@/assets/icon.svg"
+import Arrow from "@/assets/svgs/arrow.svg"
 import RightArrow from "@/assets/svgs/arrow-right.svg"
 import Profile from "@/assets/images/profile-sm.png"
 import Profile2 from "@/assets/images/profile2.png"
-import { Palette, Users, BookOpen, Target } from "lucide-react"
+import { Palette, Users, BookOpen, Target, Clock3 } from "lucide-react"
 
 import EbsPortfolio from "@/assets/images/EbsPortfolio.png";
 import BossaPortfolio from "@/assets/images/BossaPortfolio.png";
 import AfrimentPortfolio from "@/assets/images/AfrimentPortfolio.png";
 import PersonalPortfolio from "@/assets/images/PersonalPortfolio.png";
 
+import CLogo1 from "@/assets/images/c-logo1.png";
+import CLogo2 from "@/assets/images/c-logo2.png";
+import CLogo3 from "@/assets/images/c-logo3.png";
+
+
 const Images = { Logo, Profile, Profile2 }
-const Svg = { Icon, RightArrow }
+const Svg = { Icon, RightArrow, Arrow }
+
 const values = {
     NavLinks: [
         {
@@ -94,10 +101,110 @@ const values = {
             description: "Designed to attract, engage, and convert through value and authenticity.",
             icon: Target,
         },
-    ]
+    ],
+
+    MyWork: [
+        {
+            id: 1,
+            title: "Social Media Managment",
+            description: "instagram,linkedin, facebook",
+            //icon: Palette,
+        },
+        {
+            id: 2,
+            title: "Ads Management",
+            description: "meta ads, google ads",
+            //icon: Users,
+        },
+        {
+            id: 3,
+            title: "Community Management",
+            description: "Engaging audience and building loyalty",
+            //icon: BookOpen,
+        },
+        {
+            id: 4,
+            title: "Canva designer",
+            description: "",
+            //icon: Target,
+        },
+        {
+            id: 4,
+            title: "Content Writing",
+            description: "",
+            //icon: Target,
+        },
+        {
+            id: 5,
+            title: "Analysis & Report",
+            description: ".",
+            //icon: Target,
+        },
+
+    ],
+    CompanyLogo: [
+        {
+            id: 1,
+            image: CLogo1,
+        },
+        {
+            id: 2,
+            image: CLogo2,
+        },
+        {
+            id: 3,
+            image: CLogo3
+        },
+    ],
+    Testimonies: [
+        {
+            id: 1,
+            description: "Abigail brought fresh creativity and strategy to afriment's  linkedin presence. During her time with us, she consistently delivered quality content, and paid close attentionto analytics, she is hard wprking, resourcefull, and a true teamplayer i strongly recommend her for any social media managgment role.",
+            client: "Daniel Ayeni",
+            post: "CFO",
+            company: "Afriment",
+            image: "",
+        },
+        {
+            id: 2,
+            description: " Abigail’s attitude to work was remarkable. She was proactive, professional, and always eager to learn. From creating compelling advertising copy to connecting with businesses, she added real value to our marketing team. Any organization would be lucky to have her",
+            client: "Mrs. Okudaye",
+            post: "Ass Head of Marketing",
+            company: "Edo Broadcasting Service",
+            image: "",
+        },
+
+    ],
+
+    Contact: {
+        Linkedin: {
+            id: 1,
+            name: "Linkedin",
+            link: "https://www.linkedin.com/in/abigail-igberaese-140037319",
+            icon: "",
+        },
+        Email: {
+            id: 2,
+            email: "abigailigberaese0@gmail.com",
+            name: "Email",
+            link: "mailto:abigailigberaese0@gmail.com",
+            icon: "",
+        },
+        Whatsapp: {
+            id: 3,
+            name: "Whatsapp",
+            phone: "+234-9064-200-994",
+            link: "https://wa.me/+2349064200994",
+            icon: "",
+
+        }
+
+    }
 
 
 }
+
+
 
 export {
     Images,

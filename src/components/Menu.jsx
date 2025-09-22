@@ -23,7 +23,7 @@ const toggleOpen=()=>{
           </div>
         </button>
       </div>
-      <div className={` border-2 border-foreground transition-all duration-300 ease-out absolute w-[100vw] h-[100vh] top-0 z-10 flex flex-col gap-1 pt-10 items-center bg-background ${open? "left-0":"left-full"}`}>
+      <div className={`transition-all duration-500 ease-out absolute w-[100vw] h-[100vh] top-0 z-10 flex flex-col gap-1 pt-10 items-center bg-background ${open? "left-0 opacity-100":"left-full opacity-0"}`}>
 
         {values.NavLinks.map((link,i)=>(
           <a key={i} href={link.href} className='w-full h-12 font-family-Poppins font-semibold text-foreground'>{link.title}</a>

@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-    <div className='fixed flex-col w-full h-14 top-0 left-0 bg-white'>
+    <div className='fixed flex-col w-full h-14 top-0 left-0 bg-white z-10'>
       <div className='desktop hidden md:flex justify-around'>
         <div className="flex flex-row justify-start items-center gap-1 w-[30%] pl-4 z-20">
           <img 

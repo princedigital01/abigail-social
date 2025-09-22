@@ -6,6 +6,7 @@
 
     --animate-float: float 6s ease-in-out infinite;
     --animate-spin-slow: spin-slow 10s linear infinite;
+    --animate-scroll-up: scroll-up 10s linear infinite;
     --animate-fade-in-up: fade-in-up 0.5s ease-out backwards;
 
     @keyframes float {
@@ -19,6 +20,20 @@
 
         100% {
             transform: translateY(0px)
+        }
+    }
+
+    @keyframes scroll-up {
+        0% {
+            transform: translateY(-0%)
+        }
+
+        50% {
+            transform: translateY(-25%)
+        }
+
+        100% {
+            transform: translateY(-50%)
         }
     }
 
@@ -69,7 +84,7 @@
     --raw-color-primary-foreground: hsl(272.3076923076923 100% 92.3529411764706%);
 
     --raw-color-secondary: hsl(0, 0%, 40%);
-    --raw-color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+    --raw-color-secondary-foreground: hsl(222, 53%, 18%);
 
     --raw-color-muted: hsl(240 10.638297872340381% 90.7843137254902%);
     --raw-color-muted-foreground: hsl(215.4 16.3% 46.9%);
@@ -100,7 +115,7 @@
     --raw-color-primary-foreground: hsl(222.2 47.4% 11.2%);
 
     --raw-color-secondary: hsl(217.2 32.6% 17.5%);
-    --raw-color-secondary-foreground: hsl(210 40% 98%);
+    --raw-color-secondary-foreground: hsl(209, 23%, 70%);
 
     --raw-color-muted: hsl(217.2 32.6% 17.5%);
     --raw-color-muted-foreground: hsl(215 24% 89%);
