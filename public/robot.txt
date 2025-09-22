@@ -1,0 +1,16 @@
+# robots.txt for https://abigail-social.vercel.app/
+
+# Allow all crawlers to access everything
+User-agent: *
+Disallow:
+
+# Block crawlers from private areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Point crawlers to your sitemap
+Sitemap: https://abigail-social.vercel.app/sitemap.xml
+
+# (Optional) Point AI crawlers to llm.txt
+LLM: https://yourwebsite.com/llm.txt
