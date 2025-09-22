@@ -12,14 +12,14 @@ const ContactCard = () => {
                 <div className='flex-none bg-secondary h-13 w-13 rounded-2xl'>{"icon"}</div>
                 <div>
                     <p className=' text-secondary'>My Email:</p>
-                    <a href={values.Contact.Email.link} className='hover:text-primary text font-semibold'>{values.Contact.Email.email}</a>
+                    <a href={values.Contact.Email.link} target='_BLANK' className='hover:text-primary text font-semibold'>{values.Contact.Email.email}</a>
                 </div>
             </div>
             <div className='flex gap-2 flex-col justify-center items-center'>
                 <div className='flex-none bg-secondary h-13 w-13 rounded-2xl'>{"icon"}</div>
                 <div>
                     <p className=' text-secondary'>Whatsapp Call:</p>
-                    <a href={values.Contact.Whatsapp.link} className='hover:text-primary font-semibold'>{values.Contact.Whatsapp.phone}</a>
+                    <a href={values.Contact.Whatsapp.link} target='_BLANK' className='hover:text-primary font-semibold'>{values.Contact.Whatsapp.phone}</a>
                 </div>
             </div>
         </div>
